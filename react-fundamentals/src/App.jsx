@@ -16,13 +16,13 @@ const posts=[{
     {type:"paragraph", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit at quo voluptatem blanditiis"},
     {type:"link", content:"#sitefoda"},        
   ],
-  publishedAt: new Date('2022-23-12 20:00:00')
+  publishedAt: new Date("2022-12-23 20:00:00")
 },
 
 {
   id: 2,
   author:{
-    avatarUrl:"https://github.com/marcus-feitosa.png",
+    avatarUrl:"https://github.com/maykbrito.png",
     name:"Renato Augusto",
     role:"Camisa 8"
   },
@@ -31,7 +31,7 @@ const posts=[{
     {type:"paragraph", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit at quo voluptatem blanditiis"},
     {type:"link", content:"#sitefoda"},        
   ],
-  publishedAt: new Date('2022-20-12 20:00:00')
+  publishedAt: new Date('2022-12-20 20:00:00')
 },
 
 

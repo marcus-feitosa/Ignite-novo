@@ -2,36 +2,44 @@ import styles from './Post.module.css'
 import {Comment} from './Comment'
 import { Avatar } from './Avatar'
 
+import {format, formatDistanceToNow} from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR'
 
 export function Post(props){
+    const publishedDateFormatted = format(props.publishedAt, "d 'de' LLLL 'às' HH:mm'h' ", {locale: ptBR})
 
+    const publishedDateRelativeToNow = formatDistanceToNow(props.publishedAt, {
+        locale: ptBR,
+        addSuffix: true
+       
+    })
+    
     return(
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
                     <Avatar
                 
-                    src="https://github.com/marcus-feitosa.png"/>
+                    src={props.author.avatarUrl}/>
                     <div className={styles.authorInfo}>
                         <strong>
-                            Marcus Feitosa
+                            {props.author.name}
                         </strong>
                         <span>
-                            Web Developer
+                            {props.author.role}
                         </span>
                     </div>
                 </div> 
-                <time title="11 de Maio às 8:13 " dateTime="2022-05-11 08:13:30">Publicado há 1h</time>
+                <time title={publishedDateFormatted} dateTime={props.publishedAt.toISOString()}>{publishedDateRelativeToNow}</time>
             </header>
             <div className={styles.content}>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit at quo voluptatem blanditiis </p>
-                <p>labore eligendi porro quae eaque, vero delectus odit laboriosam, possimus, quas magni. </p>
-                <p><a href="">site.pica/muitopica</a></p>
-                <p>
-                    <a href="">#sitefoda</a>
-                    <a href="">#testetop</a>
-                    <a href="">#hexa</a>
-                </p>
+               {props.content.map(line=>{
+                if(line.type=='paragraph'){
+                    return <p>{line.content}</p>
+                } else if(line.type=='link'){
+                    return <p><a href='#'>{line.content}</a></p>
+                }
+               })}
             </div>
 
             <form className={styles.commentForm}>
