@@ -16,7 +16,7 @@ const posts=[{
     {type:"paragraph", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit at quo voluptatem blanditiis"},
     {type:"link", content:"#sitefoda"},        
   ],
-  publishedAt: new Date('2022-05-03 20:00:00')
+  publishedAt: new Date('2022-23-12 20:00:00')
 },
 
 {
@@ -31,7 +31,7 @@ const posts=[{
     {type:"paragraph", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit at quo voluptatem blanditiis"},
     {type:"link", content:"#sitefoda"},        
   ],
-  publishedAt: new Date('2022-10-03 20:00:00')
+  publishedAt: new Date('2022-20-12 20:00:00')
 },
 
 
@@ -46,8 +46,18 @@ export function App() {
 
       <Sidebar />
       <main>
-      <Post/>
-      <Post/>
+        {
+          posts.map(post =>{
+            return (
+            <Post
+              author={post.author}
+              content={post.content}
+              publishedAt={post.publishedAt}
+            />
+            
+            )
+          })
+        }
       </main>
     </div>
     </div>

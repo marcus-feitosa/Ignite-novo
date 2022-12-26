@@ -3,7 +3,7 @@ import {Comment} from './Comment'
 import { Avatar } from './Avatar'
 
 
-export function Post(){
+export function Post(props){
 
     return(
         <article className={styles.post}>
