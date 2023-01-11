@@ -14,7 +14,7 @@ const posts=[{
   content:[
     {type:"paragraph", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit at quo voluptatem blanditiis",},
     {type:"paragraph", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit at quo voluptatem blanditiis"},
-    {type:"link", content:"#sitefoda"},        
+    {type:"link", content:"#sitetop"},        
   ],
   publishedAt: new Date("2022-12-23 20:00:00")
 },
@@ -29,7 +29,7 @@ const posts=[{
   content:[
     {type:"paragraph", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit at quo voluptatem blanditiis",},
     {type:"paragraph", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit at quo voluptatem blanditiis"},
-    {type:"link", content:"#sitefoda"},        
+    {type:"link", content:"#aquitemumsite"},        
   ],
   publishedAt: new Date('2022-12-20 20:00:00')
 },
