@@ -44,8 +44,6 @@ export function Post(props:PostProps){
         
         setComments([...comments, newCommentText]);
         setNewCommentText('');
-
-       
     }
 
     function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>){
